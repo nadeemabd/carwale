@@ -1,0 +1,35 @@
+.container
+	.well
+		form.form-horizontal(name="bookingForm")
+			fieldset
+				legend Please provide additional booking details
+				.form-group
+					label.col-md-2.control-label(for="address") Address
+					.col-md-10
+						input.form-control(type="text-box", name="address", placeholder="Address", ng-model="address", required)
+				.form-group
+					label.col-md-2.control-label(for="city") City
+					.col-md-10
+						input.form-control(type="text", name="city", placeholder="City", ng-model="city", required)
+				.form-group
+					label.col-md-2.control-label(for="state") State
+					.col-md-10
+						input.form-control(type="text", name="state", placeholder="State", ng-model="state", required)
+				.form-group
+					label.col-md-2.control-label(for="pincode") Pincode
+					.col-md-10
+						input.form-control(type="text", name="pincode", placeholder="Pincode", ng-model="pincode", required)
+				.form-group
+					label.col-md-2.control-label(for="mobileNo") Mobile Number
+					.col-md-10
+						input.form-control(type="text", name="mobileNo", placeholder="Mobile Number", ng-model="mobileNo", required)
+				.form-group
+					label.col-md-2.control-label(for="bankAccountNo") Bank Account Number
+					.col-md-10
+						input.form-control(type="text", name="bankAccountNo", placeholder="Bank Account Number", ng-model="bankAccountNo", required)
+				.form-group
+					.col-md-10.col-md-offset-2
+						.pull-right
+							button.btn.btn-primary(ng-click="book()", ng-disabled="bookingForm.$invalid") Submit
+							| &nbsp;
+							a.btn.btn-defualt(href="/") Cancel

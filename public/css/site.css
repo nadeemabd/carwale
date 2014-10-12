@@ -1,0 +1,131 @@
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #f00;
+}
+.navbar-right > li > a {
+  background-color: #e3e3e3;
+}
+.navbar {
+  border-radius: 0px;
+  border: none;
+  border-radius: 0px;
+  margin: 0px;
+  background: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.75);
+  z-index: 999;
+}
+.navbar-header a.navbar-brand {
+  margin-top: -15px;
+  margin-bottom: -20px;
+}
+.navbar-header a.navbar-brand h6 {
+  color: #ccc;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer p {
+  margin: 0 0 10px;
+}
+.navbar-form .form-group {
+  margin-left: 10px;
+}
+.navbar-form button {
+  margin-left: 10px;
+}
+.toast-top-right {
+  top: 70px;
+}
+.toast-success {
+  background-color: #13987e;
+}
+ul,
+li,
+.list-inline {
+  padding: 0;
+  margin: 0;
+}
+a:focus {
+  outline: none;
+  border: none;
+}
+.box {
+  max-width: 150px;
+  text-align: center;
+  border-radius: 20px;
+}
+.car-menu-row {
+  margin-top: 20px;
+}
+.main-search {
+  margin: 20px 0px 10px 0px;
+  position: relative;
+}
+.footer-container {
+  border-top: 1px solid #e5e5e5;
+  padding: 36px;
+  text-align: center;
+}
+.jumbotron {
+  background: none;
+}
+.footer-menu {
+  margin: 15px 0px 5px 0px;
+}
+.news-img {
+  margin: 10px;
+}
+.featured {
+  background-color: #f33c36;
+}
+.featured-inner {
+  margin: 50px 0px;
+}
+.featured-inner .tabset .nav-tabs .active > a {
+  background-color: #c0291d;
+  border: none;
+  border-radius: 18px;
+  border: 2px solid #c0291d;
+}
+.featured-inner .tabset > .nav-tabs > .active > a:hover {
+  background-color: #c0291d;
+  border-radius: 18px;
+  margin: 0px;
+  border: 2px solid #c0291d;
+}
+.featured-inner .tabset > .nav-tabs > li {
+  margin: 0px;
+  padding-right: 5px;
+}
+.featured-inner .tabset > .nav-tabs > li > a {
+  background: none;
+  border: none;
+  color: #fff;
+  margin: 0px;
+  border: 2px solid #f33c36;
+  border-radius: 20px;
+}
+.featured-inner .tabset > .nav-tabs > li > a:hover {
+  background: none;
+  border: 2px solid #c0291d;
+  color: #fff;
+  border-radius: 18px;
+  cursor: pointer;
+}
+.featured-inner .tabset > .nav-tabs > li.active > a:focus {
+  background-color: #c0291d;
+  border: 2px solid #c0291d;
+  color: #fff;
+  border-radius: 18px;
+}
+.featured-inner .tabset > .nav {
+  background: none;
+  border: none;
+  margin: 10px 0px;
+  border-radius: 20px;
+}
+.searchBox {
+  position: absolute;
+  z-index: 999999;
+  width: 100%;
+}

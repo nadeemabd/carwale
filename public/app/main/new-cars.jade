@@ -1,0 +1,11 @@
+.row
+	div.col-sm-3.col-md-3(ng-repeat="car in cars | filter: {type: 'New'} | limitTo: 4")
+		.thumbnail
+			img(src='../img/{{car.image}}.jpg', alt='...', data-src='../img/{{car.image}}.jpg')
+			.caption
+				h3 {{car.name}}
+				p.description
+					| {{car.description}}
+				p
+					a.btn.btn-primary(role='button', href='#') Button
+					a.btn.btn-default(role='button', href='#') Button

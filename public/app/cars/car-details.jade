@@ -1,0 +1,18 @@
+.container
+  h1 {{car.name}}
+    span.badge {{car.type | date}}
+    span.badge {{car.price | currency}}
+  .row
+    .col-md-6
+      img(src="../img/{{ car.image }}.jpg", alt="")
+
+    .col-md-6
+      .panel.panel-primary
+        .panel-heading Description
+        .panel-body
+          div
+            ul
+              li(ng-repeat="feature in car.features") {{feature}}
+  .well
+    p {{car.description}}
+  a.btn.btn-primary(href="/cars/{{car._id}}/booking" ng-click="getCar()") Book
