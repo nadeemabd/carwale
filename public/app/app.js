@@ -62,8 +62,16 @@ angular.module('app').config(function($routeProvider, $locationProvider) {
 			templateUrl: '/partials/account/booking-success',
 			controller: 'mvBookingSuccessCtrl',
 			resolve: routeRoleChecks.bookingUser
-		});
-
+		})
+		.when('/:userid/orders', {
+			templateUrl: '/partials/account/orders',
+			controller: 'mvOrdersCtrl',
+			resolve: routeRoleChecks.bookingUser
+		})
+		.when('/404', {
+			templateUrl: '/partials/main/404'
+		})
+		.otherwise({ redirectTo: '/404'});
 });
 
 angular.module('app').run(function($rootScope, $location) {

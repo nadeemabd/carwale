@@ -1,12 +1,20 @@
-angular.module('app').controller('mvBookingDetailCtrl', function($scope, mvAuth, mvIdentity, mvNotifier, $location, $routeParams) {
+angular.module('app').controller('mvBookingDetailCtrl', function($scope, mvAuth, mvIdentity, mvNotifier, $location, $routeParams, $window, $route, mvCachedCars) {
 	var getCarId = $routeParams.id;
 	carUrl = '/cars/' + getCarId + '/booking';
 	carIdIndex = mvIdentity.currentUser.bookingOrder.bookings.indexOf($routeParams.id);
 	$scope.bookings = mvIdentity.currentUser.bookingOrder.bookings;
 
-	if (carIdIndex > -1) {
+	mvCachedCars.query().$promise.then(function(collection) {
+		collection.forEach(function(car) {
+			if (car._id === getCarId) {
+				$scope.car = car;
+			}
+		});
+	});
+
+	/*if (carIdIndex > -1) {
 		$location.path('/booking-profile');
-	}
+	}*/
 
 	$scope.address = mvIdentity.currentUser.bookingOrder.address;
 	$scope.city = mvIdentity.currentUser.bookingOrder.city;

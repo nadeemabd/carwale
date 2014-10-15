@@ -1,4 +1,4 @@
-angular.module('app').controller('mvMainCtrl', function($scope, mvCachedCars, $http) {
+angular.module('app').controller('mvMainCtrl', function($scope, mvCachedCars, $http, $location) {
 	$scope.cars = mvCachedCars.query();
 
 	$scope.change = function() {
@@ -6,4 +6,8 @@ angular.module('app').controller('mvMainCtrl', function($scope, mvCachedCars, $h
 			return true;
 		}
 	};
+	$scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
+
 });

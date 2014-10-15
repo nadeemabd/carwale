@@ -7,14 +7,11 @@
 		span.icon-bar
 	a.navbar-brand(href='/')
 		span
-			img(width='', alt='Carwale.com', src='../img/logo-smaller.png')
-// Collect the nav links, forms, and other content for toggling
+			img(width='', alt='Carwale.com', src='../img/site/logo-smaller.png')
 #primary-nav-collapse.collapse.navbar-collapse
-	ul.nav.navbar-nav
-		li
+	ul.nav.navbar-nav.main-menu(ng-controller="mvMainCtrl")
+		li(ng-class="{ menuactive: isActive('/')}")
 			a(href="/") Home
-		li
+		li(ng-class="{ menuactive: isActive('/cars')}")
 			a(href="/cars") Cars
 	div(ng-include="'/partials/account/navbar-login'")
-	// /.navbar-collapse
-// /.container-fluid

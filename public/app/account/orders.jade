@@ -1,0 +1,11 @@
+.jumbotron
+	.container
+		h1 Your Orders
+		table.table.table-bordered
+			tr(ng-repeat="order in carOrders track by $index")
+				td
+					img(src="../img/newcars/{{order.image}}_200.png", alt="{{order.name}}")
+				td
+					h2 {{order.name}}
+				td
+					h2 {{ order.price | currency: "INR "}}

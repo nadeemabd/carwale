@@ -1,9 +1,10 @@
-form(action='', role='form')
-	.form-group.text-center
-		h1 Search for a car
-		input.form-control.text-center(type='text', placeholder='Search here...', ng-model="searchText")
-.searchBox
-	ul.list-group
-		li.list-group-item(ng-repeat="car in cars | filter: searchText", ng-show="searchText")
-			h4
-				a(href="/cars/{{car._id}}") {{ car.name }}
+.jumbotron.container
+	.search-bar
+		form(action='', role='form')
+			.form-group.text-center
+				h1 Search for a car
+				input.form-control.text-center(type='text', placeholder='Search here...', ng-model="searchText")
+		.searchBox
+			.list-group
+				a.list-group-item.list-group-item-danger(href="/cars/{{car._id}}", ng-repeat="car in cars | filter: searchText", ng-show="searchText")
+					h4 {{ car.name }}

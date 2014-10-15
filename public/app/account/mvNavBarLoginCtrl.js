@@ -18,4 +18,8 @@ angular.module('app').controller('mvNavBarLoginCtrl', function($scope, $http, mv
 			$location.path('/');
 		});
 	};
+
+	$scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
 });

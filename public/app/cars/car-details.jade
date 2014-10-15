@@ -1,18 +1,39 @@
-.container
-  h1 {{car.name}}
-    span.badge {{car.type | date}}
-    span.badge {{car.price | currency}}
-  .row
-    .col-md-6
-      img(src="../img/{{ car.image }}.jpg", alt="")
+.full-back
+  //- .container
+  //-   h1 {{car.name}}
+  //-     span.badge {{car.type | date}}
+  //-     span.badge {{car.price | currency}}
+  //-   .row
+  //-     .col-md-6
+  //-       img(src="../img/cars/{{ car.image }}.jpg", alt="")
 
-    .col-md-6
-      .panel.panel-primary
-        .panel-heading Description
-        .panel-body
-          div
-            ul
-              li(ng-repeat="feature in car.features") {{feature}}
-  .well
-    p {{car.description}}
-  a.btn.btn-primary(href="/cars/{{car._id}}/booking" ng-click="getCar()") Book
+  //-     .col-md-6
+  //-       .panel.panel-primary
+  //-         .panel-heading Description
+  //-         .panel-body
+  //-           div
+  //-             ul
+  //-               li(ng-repeat="feature in car.features") {{feature}}
+  //-   .well
+  //-     p {{car.description}}
+  //-   a.btn.btn-primary(href="/cars/{{car._id}}/booking" ng-click="getCar()") Book
+  .row
+    .col-lg-6.jumbotron
+      .overview
+        .page-header
+          h1 {{car.name}}
+          h2
+            span.label.label-danger {{car.type}}
+        .specs-overview
+          ul
+            li(ng-repeat="feature in car.features")
+              h4 {{feature}}
+        .description
+          p {{car.description}}
+        .price
+          h3 Price: {{ car.price | currency: "INR " }} &nbsp;
+            a.btn.btn-danger(href="/cars/{{car._id}}/booking", ng-click="getCar()") Book
+    .col-lg-6
+      .car-image-div
+        .car-image
+          img.img-responsive(src="../img/newcars/{{car.image}}_900.png", alt="{{car.name}}")

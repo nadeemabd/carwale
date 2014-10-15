@@ -1,9 +1,9 @@
 .container
-    .featured-inner
+    .featured-inner.text-center
         tabset.tabset
             tab(heading='Upcoming Cars')
-                div(ng-include="'/partials/main/upcoming-cars'")
+                div(ng-include="'/partials/cars/upcoming-cars'")
             tab(heading='New Cars')
-                div(ng-include="'/partials/main/new-cars'")
+                div(ng-include="'/partials/cars/new-cars'")
             tab(heading='Featured Cars')
-                div(ng-include="'/partials/main/featured-cars'")
+                div(ng-include="'/partials/cars/featured-cars'")

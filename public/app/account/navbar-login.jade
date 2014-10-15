@@ -1,15 +1,15 @@
 .navbar-right(ng-controller="mvNavBarLoginCtrl")
+	ul.nav.navbar-nav.signup(ng-hide="identity.isAuthenticated()")
+			li(ng-class="{ menuactive: isActive('/signup')}")
+				a(href="/signup") Sign Up
 	form.navbar-form(ng-hide="identity.isAuthenticated()")
-		ul.nav.navbar-nav
-			li
-				a(href="signup") Sign Up
 		.form-group
 			input.form-control(placeholder="Email", ng-model="username")
 		.form-group
 			input.form-control(type="password", placeholder="Password", ng-model="password")
 		button.btn.btn-primary(ng-click="signin(username, password)") Sign In
-	ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
-		li.dropdown
+	ul.nav.navbar-nav.navbar-right.signup(ng-show="identity.isAuthenticated()")
+		li.dropdown.user-space
 			a.dropdown-toggle(href="")
 				| {{ identity.currentUser.firstName + " " + identity.currentUser.lastName }}
 				b.caret
@@ -21,6 +21,4 @@
 				li
 					a(href="", ng-click="signout()") Sign Out
 				li
-					a(href='#')
-						| Cart
-						span.badge 0
+					a(href='/{{identity.currentUser._id}}/orders', target="_self") Cart

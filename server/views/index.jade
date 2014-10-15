@@ -1,21 +1,10 @@
 extends ../includes/layout
 
 block main-content
-	nav.navbar.navbar-default(ng-include="'/partials/main/navbar'", role="navigation")
-	//- .navbar.navbar-default.navabar-fixed-top
-	//- 	.container
-	//- 		.navbar-header
-	//- 			a.navbar-brand(href="/")
-	//- 		.navbar-collapse.collapse
-	//- 			ul.nav.navbar-nav
-	//- 				li
-	//- 					a(href="/") Home
-	//- 				li
-	//- 					a(href="/cars") Cars
-	//- 			div(ng-include="'/partials/account/navbar-login'")
+	nav.navbar.navbar-default.navbar-fixed-top(ng-include="'/partials/main/navbar'", role="navigation")
 
 	section.content
-		div(ng-view)
+		div(ng-view autoscroll="true")
 
 	//- footer.container.text-center
 	//- 	p &copy; Copyright 2014
@@ -26,13 +15,13 @@ block main-content
 				ul.list-inline
 					li
 						a(href='#')
-							img(alt='Facebook', src='../img/fb_icon.png')
+							img(alt='Facebook', src='../img/social/fb_icon.png')
 					li
 						a(href='#')
-							img(alt='Twitter', src='../img/twitter_icon.png')
+							img(alt='Twitter', src='../img/social/twitter_icon.png')
 					li
 						a(href='#')
-							img(alt='Gplus', src='../img/gplus_icon.png')
+							img(alt='Gplus', src='../img/social/gplus_icon.png')
 		.footer-menu
 			ul.list-inline
 				li

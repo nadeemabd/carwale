@@ -124,15 +124,15 @@ function createDefaultCars() {
 				}
 			});
 			Car.create({
-				name: 'Tata Nano LX Special Edition',
+				name: 'Volkswagen Beetle',
 				price: 699000,
-				description: 'The Tata Zest compact sedan is the first of the new vehicles from the Pune-based automaker. It was first shown just ahead of the Auto Expo, and was launched in the middle of 2014 in five diesel and four petrol variants. It features a very similar design to that of the hatchback but includes a noticeable but quite decent looking boot. It makes use of the same engine, underpinnings, interior design as well as feature list from the hatchback. The variant nomenclature is new to this family of vehicles and runs across both petrol and diesel engine options- XE, XM, XMS, XT and XMA , the last of which is specific to the diesel range and has been mated to the five-speed AMT.',
-				image: 'Tata_Nano_LX_Special_Edition',
+				description: 'Volkswagen Beetle comes in following versions with 1 engine and 1transmission and 1 fuel options. Click on a Beetle version name to know on-road price in your city, specifications and features.The date December 04, 2009 will remain etched in minds of Beetle lovers in the country. It was on this day when the ‘New Beetle’ drove into the Indian roads – almost 70 years (1938) since the birth of the first Bug in Germany. The Beetle as it is known today was a demand made by Hitler to Ferdinand Porsche to build a ‘people’s car’ – one that can transport two adults and two children. Well, whether the car today is really a people’s car is a big question – it comes at a whopping price(Rs 21.47lakh, ex-showroom Mumbai).',
+				image: 'Volkswagen_Beetle',
 				type: 'Featured',
 				features: {
-					engine: '1248 cc, Diesel, 74 bhp @ 4000 RPM power',
-					gearboxes: '5-speed, Manual, FWD',
-					seating: '5 seater',
+					engine: '1984 cc, Petrol, 114 bhp @ 5400 RPM power ',
+					gearboxes: '6-speed, Automatic, FWD',
+					seating: '4 seater ',
 					steering: 'Power steering'
 				}
 			});

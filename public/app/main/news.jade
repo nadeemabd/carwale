@@ -1,13 +1,14 @@
 .container
-  div
+  div.text-center
     h1 News & Announcements
     .news-panel.panel.panel-default(ng-repeat="car in cars | limitTo: 3")
       .panel-heading
         h3.panel-title
-          | {{car.name}}
+          a(href="/cars/{{car._id}}")
+            | {{car.name}}
       .panel-body
         .news-img.pull-left
-          img.media-object.img-thumbnail(width='100px', height='100px', alt='', src='../img/{{car.image}}.jpg')
+          img.media-object.img-thumbnail(width='100px', height='100px', alt='', src='../img/newcars/{{car.image}}_200.png')
         .media-body
           p
             | {{car.description}}

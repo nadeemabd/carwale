@@ -1,0 +1,12 @@
+.row
+	div.col-sm-3.col-md-3(ng-repeat="car in cars | filter: {type: 'Upcoming'} | limitTo: 4")
+		.thumbnail
+			a(href='/cars/{{car._id}}')
+				img(src='../img/newcars/{{car.image}}_200.png', alt='...', data-src='../img/newcars/{{car.image}}_200.png',
+					width="200px")
+			.caption
+				a.category-link(href='/cars/{{car._id}}')
+					h3 {{car.name}}
+				p.description
+					| {{car.description}}
+				span.badge {{car.price | currency: "INR "}}
